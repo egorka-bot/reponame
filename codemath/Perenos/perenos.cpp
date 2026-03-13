@@ -6,7 +6,7 @@
 const double L {20};
 const double T {28};
 const double h {0.5};
-const double CFL {0.1};
+const double CFL {1};
 const double tau {CFL * h};
 const size_t N = L / h;
 

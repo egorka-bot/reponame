@@ -78,7 +78,7 @@ Eigen::Matrix<T, 3, 1> nextWtime(T tau, Eigen::Matrix<T, 3, 1> const& currentW, 
 	bool flag = true;
 	while(flag) {
 		if(CFL < 1) {
-			auto nextWtime = currentW + tau / (2 * h) * A * (currentWnext -currentWprev) + 
+			auto nextWtime = currentW - tau / (2 * h) * A * (currentWnext -currentWprev) + 
 			       tau / (2 * h) * OmegaRevers * ModuleLambda * Omega * (currentWnext - 2 * currentW + currentWprev);	       
 			return nextWtime;
 		} else{
